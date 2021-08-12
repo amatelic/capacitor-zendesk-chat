@@ -10,11 +10,11 @@ require 'json'
     s.license = package['license']
     s.homepage = package['homepage']
     s.author = package['author']
-    s.ios.deployment_target  = '14.1'
+    s.ios.deployment_target  = '12.0'
     s.dependency 'Capacitor'
-    s.dependency 'ZDCChat', '1.4.7'
+    s.dependency 'ZDCChat', '1.4.0'
     s.static_framework = true
-    s.source = { :git => 'https://github.com/sencrop/capacitor-zendesk-chat', :tag => s.version.to_s }
+    s.source = { :git => 'https://github.com/amatelic/capacitor-zendesk-chat.git', :tag => s.version.to_s }
     s.source_files = 'ios/CapacitorZendeskChat/Source/*.{swift,h,m}'
     s.swift_version = '4.2'
   end

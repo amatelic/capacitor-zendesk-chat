@@ -31,8 +31,8 @@ public class ZendeskChat: CAPPlugin {
     @objc func open(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
             let department = call.getString("department")
-            let tags = call.getArray("tags", String.self, []);
-            ZDCChat.start(in: self.bridge.viewController.navigationController, withConfig: {config in
+            let tags = call.getArray("tags", String.self);
+            ZDCChat.start(in: self.bridge?.viewController?.navigationController, withConfig: {config in
                 config?.department = department
                 config?.tags = tags
             })
